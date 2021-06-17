@@ -59,7 +59,44 @@ class TopSection extends StatelessWidget {
           );
         }
 
-        return Container();
+        return Column(
+          children: [
+            AspectRatio(
+              aspectRatio: 3.4,
+              child: Image.network(
+                "https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w940",
+                fit: BoxFit.cover,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Aprenda Flutter com este curso",
+                    style: TextStyle(
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    "Bora mudar de vida e recomeçar? Cursos a partir de R\$29,99. Qualidade garantida, seu sucesso nas suas mãos",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  CustomSearchField(),
+                ],
+              ),
+            ),
+          ],
+        );
       },
     );
   }

@@ -11,6 +11,7 @@ class HomeView extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Scaffold(
+            backgroundColor: Colors.black,
             appBar: constraints.maxWidth < mobileBreakpoint
                 ? PreferredSize(
                     child: MobileAppBar(),
