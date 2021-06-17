@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:todev_courses/breakpoints.dart';
 import 'package:todev_courses/views/home/widgets/custom_search_field.dart';
+
+import 'message_card.dart';
 
 class TopSection extends StatelessWidget {
   @override
@@ -23,36 +26,32 @@ class TopSection extends StatelessWidget {
                 Positioned(
                   left: 50,
                   top: 50,
-                  child: Card(
-                    elevation: 8,
-                    color: Colors.black,
-                    child: Container(
-                      width: 450,
-                      padding: EdgeInsets.all(22),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Aprenda Flutter com este curso",
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(height: 8),
-                          Text(
-                            "Bora mudar de vida e recomeçar? Cursos a partir de R\$29,99. Qualidade garantida, seu sucesso nas suas mãos",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(height: 8),
-                          CustomSearchField(),
-                        ],
-                      ),
-                    ),
+                  child: MessageCard(),
+                ),
+              ],
+            ),
+          );
+        }
+        // se eh maior que o breakpoint do mobile, significa que ele eh um tablet ou
+        // web, mas como a web ja foi tratada, entao eh o tablet
+        if (maxWidth >= mobileBreakpoint) {
+          return SizedBox(
+            height: 320,
+            child: Stack(
+              children: [
+                SizedBox(
+                  height: 250,
+                  width: double.infinity,
+                  child: Image.network(
+                    "https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w940",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Positioned(
+                  left: 20,
+                  top: 20,
+                  child: MessageCard(
+                    isSmaller: true,
                   ),
                 ),
               ],
