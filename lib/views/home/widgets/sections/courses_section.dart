@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todev_courses/breakpoints.dart';
 
+import '../course_item.dart';
+
 class CoursesSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,9 +23,7 @@ class CoursesSection extends StatelessWidget {
           ),
           itemCount: 20,
           itemBuilder: (context, index) {
-            return Container(
-              color: Colors.red,
-            );
+            return CourseItem();
           },
         );
       },
