@@ -5,6 +5,8 @@ import 'package:todev_courses/views/home/widgets/app_bar/web_app_bar.dart';
 import 'package:todev_courses/views/home/widgets/sections/advantages_section.dart';
 import 'package:todev_courses/views/home/widgets/sections/top_section.dart';
 
+import 'widgets/sections/courses_section.dart';
+
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,7 @@ class HomeView extends StatelessWidget {
                   children: [
                     TopSection(),
                     AdvantagesSection(),
+                    CoursesSection(),
                   ],
                 ),
               ),
