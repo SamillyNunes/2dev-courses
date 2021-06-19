@@ -13,8 +13,10 @@ class CourseItem extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Flexible(
+          flex: 3,
           child: AutoSizeText(
             "Criação de Apps Android e IOS com Flutter",
+            minFontSize: 3,
             textAlign: TextAlign.start,
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -23,20 +25,28 @@ class CourseItem extends StatelessWidget {
             ),
           ),
         ),
-        Text(
-          "Samilly Nunes",
-          textAlign: TextAlign.start,
-          style: TextStyle(
-            color: Colors.grey,
+        Flexible(
+          flex: 1,
+          child: AutoSizeText(
+            "Samilly Nunes",
+            textAlign: TextAlign.start,
+            minFontSize: 2,
+            style: TextStyle(
+              color: Colors.grey,
+            ),
           ),
         ),
-        Text(
-          "R\$29,90",
-          textAlign: TextAlign.start,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 14,
-            color: Colors.white,
+        Flexible(
+          flex: 1,
+          child: AutoSizeText(
+            "R\$29,90",
+            textAlign: TextAlign.start,
+            minFontSize: 2,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 14,
+              color: Colors.white,
+            ),
           ),
         ),
       ],
